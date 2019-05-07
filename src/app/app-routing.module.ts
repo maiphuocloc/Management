@@ -4,7 +4,9 @@ import { SigninComponent } from './component/signin/signin.component';
 import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: SigninComponent },
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: SigninComponent },
   { path: '**', redirectTo: '/notfound' },
 ];
 

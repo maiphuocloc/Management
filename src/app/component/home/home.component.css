@@ -1,16 +1,34 @@
 body {
     background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 }
+.logo{
+    width: 100px;
+    height: 50px;
+}
 .info-1{
     border: 1px solid black;
     border-top-left-radius: 3%;
     border-bottom-left-radius: 3%;
+    background-color: white;
 }
 .info-2{
     border: 1px solid black;
     border-top-right-radius: 3%;
     border-bottom-right-radius: 3%;
+    background-color: white;
+}
+.ptitle{
+    margin-top: 5%;
+    text-align: center;
 }
 .diagram{
+    padding: 0%;
     border: 1px solid black;
+    background-color: white;
+}
+.imgdg{
+    display: block;
+    height: auto;
+    max-width: 100%;
+    
 }
