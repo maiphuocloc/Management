@@ -3,6 +3,7 @@
   --input-padding-y: .75rem;
 }
 
+
 body {
   background: #00ff62;
   background: linear-gradient(to right, rgb(0, 230, 96), rgb(51, 255, 68));
@@ -17,15 +18,17 @@ body {
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
-.card-signin .card-title {
+.card-signin  {
   margin-bottom: 2rem;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .card-signin .card-body {
   padding: 2rem;
 }
+
+
 
 .form-signin {
   width: 100%;
@@ -46,8 +49,8 @@ body {
 }
 
 .form-label-group input {
-  height: auto;
-  border-radius: 2rem;
+  height: 40px;
+  border-radius: 0rem;
 }
 
 .form-label-group>input,
@@ -63,13 +66,18 @@ body {
   width: 100%;
   margin-bottom: 0;
   /* Override default `<label>` margin */
-  line-height: 1.5;
+  line-height: 1;
+  padding-left: 1rem;
   color: #495057;
   border: 1px solid transparent;
   border-radius: .25rem;
   transition: all .1s ease-in-out;
 }
-
+.label1{
+  font-size: 1.5rem;
+  text-align: center;
+  
+}
 .form-label-group input::-webkit-input-placeholder {
   color: transparent;
 }
