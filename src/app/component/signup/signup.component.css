@@ -7,7 +7,7 @@
   }
   
   body {
-    background: linear-gradient(to right, rgb(0, 230, 96), rgb(51, 255, 68));
+    background-image: linear-gradient(to right, #77ff7e 0%, #7aff81 0%, #7fff8a 21%, #89f985 52%, #55cf5b 78%, #2ab152 100%);
 }
   .logo{
     width: 100px;
@@ -21,8 +21,9 @@
   
   #logbox {
     padding: 10px;
-    margin: 50px auto;
-    width: 340px;
+    margin: 64px auto;
+    width: 445px;
+    height: 497px;
     background-color: #fff;
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
@@ -36,6 +37,7 @@
     color: #757575;
     font-weight: 300;
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   h1, input {
@@ -71,7 +73,7 @@
     width: 85%;
     height: 50px;
     display: block;
-    margin: 30px auto 30px;
+    margin: 40px auto 30px;
     color: white;
     background-color: #3CC;
     border: none;

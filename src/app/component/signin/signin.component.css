@@ -6,7 +6,7 @@
 
 body {
   background: #00ff62;
-  background: linear-gradient(to right, rgb(0, 230, 96), rgb(51, 255, 68));
+  background-image: linear-gradient(to right, #77ff7e 0%, #7aff81 0%, #7fff8a 21%, #89f985 52%, #55cf5b 78%, #2ab152 100%);
 }
 .logo{
   width: 100px;
@@ -19,9 +19,10 @@ body {
 }
 
 .card-signin  {
-  margin-bottom: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
 }
 
 .card-signin .card-body {
@@ -50,12 +51,12 @@ body {
 
 .form-label-group input {
   height: 40px;
-  border-radius: 0rem;
+  border-radius: 1rem;
 }
 
 .form-label-group>input,
 .form-label-group>label {
-  padding: var(--input-padding-y) var(--input-padding-x);
+  padding: 5px;
 }
 
 .form-label-group>label {
