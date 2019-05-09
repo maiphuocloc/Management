@@ -1,0 +1,28 @@
+
+.ullist{
+    padding-left: 0px;
+    list-style: none;
+}
+.ptitle{
+    margin-top: 5%;
+    text-align: center;
+}
+.jumbotron{
+    background-color: #f8f9fa;
+    box-shadow: 5px 5px 15px;
+    width: 1400px !important;
+}
+.avatar{
+    border: 2px solid black;
+    box-shadow: 5px 5px 15px;
+    margin: 10px;
+}
+.info1{
+padding: 30px 200px;
+}
+.info2{
+    
+}
+.info3{
+    
+}
