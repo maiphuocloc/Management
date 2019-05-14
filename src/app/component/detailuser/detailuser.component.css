@@ -1,4 +1,6 @@
-
+body {
+    background-image: linear-gradient(to right, #77ff7e 0%, #7aff81 0%, #7fff8a 21%, #89f985 52%, #55cf5b 78%, #2ab152 100%);
+}
 .ullist{
     padding-left: 0px;
     list-style: none;
@@ -19,10 +21,4 @@
 }
 .info1{
 padding: 30px 200px;
-}
-.info2{
-    
-}
-.info3{
-    
 }

@@ -1,35 +1,26 @@
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin my-5">
-          <div class="card-body">
-            <h3 class="text-center" style="color:darkgray; margin-bottom: 2rem; ">Đăng Nhập</h3>
-            <form class="form-signin">
-              <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <label class="label1" for="inputEmail">Địa chỉ email</label>
-              </div>
-
-              <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control " placeholder="Password" required>
-                <label class="label1" for="inputPassword">Mật khẩu</label>
-              </div>
-
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
-              </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Đăng nhập</button>
-              <hr class="my-4">
-              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
-                  class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
-              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
-                  class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
-            </form>
-          </div>
-        </div>
+    <div class="col">
+      <div id="logbox">
+        <form id="signup" method="post" action="/signup">
+          <h1>Đăng nhập</h1>
+          <input name="user[name]" type="text" placeholder="Tên đăng nhập" pattern="^[\w]{3,16}$"
+            autofocus="autofocus" required="required" class="input pass" />
+          <input name="user[password]" type="password" placeholder="Mật khẩu" required="required"
+            class="input pass" />
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
+            </div>  
+          <input type="submit" value="Đăng Nhập" class="inputButton" />
+          <hr>
+          <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+              class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
+          <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+              class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
+        </form>
       </div>
     </div>
   </div>
 </body>
+
