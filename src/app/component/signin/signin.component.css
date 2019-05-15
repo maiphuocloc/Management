@@ -5,13 +5,10 @@
 
 
 body {
-  background: #00ff62;
-  background-image: linear-gradient(to right, #77ff7e 0%, #7aff81 0%, #7fff8a 21%, #89f985 52%, #55cf5b 78%, #2ab152 100%);
+  background-color: aliceblue;
 }
-.logo{
-  width: 100px;
-  height: 50px;
-}
+
+
 .card-signin {
   border: 0;
   border-radius: 1rem;
@@ -119,9 +116,6 @@ body {
   background-color: #8ac7d8;
 }
 
-body {
-  background-image: linear-gradient(to right, #77ff7e 0%, #7aff81 0%, #7fff8a 21%, #89f985 52%, #55cf5b 78%, #2ab152 100%);
-}
 .container {
   display: -webkit-flex;
   display: flex;

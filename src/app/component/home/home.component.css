@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to right, #77ff7e 0%, #7aff81 0%, #7fff8a 21%, #89f985 52%, #55cf5b 78%, #2ab152 100%);
+    background-color: aliceblue;
 }
 
 .info-1{
@@ -24,9 +24,15 @@ c
     display: block;
     height: auto;
     max-width: 100%;
-
-    
 }
+.imgif{
+    padding-top: 15px;
+}
+
+.infomation img {
+float: right;
+}
+
 .jumbotron{
     background-color: #f8f9fa;
     box-shadow: 5px 5px 15px;
