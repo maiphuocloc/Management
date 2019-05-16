@@ -10,6 +10,8 @@ import { HomeComponent } from './component/home/home.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { DetailuserComponent } from './component/detailuser/detailuser.component';
 import {MatButtonModule, MatCheckboxModule, MatInputModule} from '@angular/material';
+import { HeaderComponent } from './component/header/header.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import {MatButtonModule, MatCheckboxModule, MatInputModule} from '@angular/mater
     HomeComponent,
     SignupComponent,
     DetailuserComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

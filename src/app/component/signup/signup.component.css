@@ -5,10 +5,7 @@
   ::-moz-selection {
     background-color: #8ac7d8;
   }
-  
-  body {
-    background-color: aliceblue;
-}
+
   .container {
     display: -webkit-flex;
     display: flex;
