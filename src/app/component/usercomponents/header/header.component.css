@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  font-family: "Roboto Cn",sans-serif;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+header{
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(
+    to right bottom ,
+    rgba(126,213,111,1),
+    rgba(40,180,131,1)
+  );
+  background-size: cover;
+  position: fixed;
+  overflow: hidden;
+  z-index: 10000;
+}
+.container{
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav{
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+nav ul{
+  display: flex;
+}
+nav ul li{
+  list-style: none;
+}
+nav ul li a{
+  padding: 1rem 0;
+  margin: 0 3rem;
+  position: relative;
+  letter-spacing: 2px;
+  color: white;
+}
+nav ul li a:hover{
+  color:orange;
+}
+nav ul li a:last-child{
+  margin-right: 0;
+}
+.brand{
+  font-size: 3rem;
+  font-weight: 400;
+}
+.brand a{
+  color: white;
+  border: 2px solid;
+}
+.brand a:hover{
+  color: orange;
+  border-color: orange;
+}
+.dropdown{
+  margin-right: -50px;
+}
+.dropdown-content {
+  display: none;
+  position: fixed;
+  margin-left: -80px;
+  z-index: 1;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    to right bottom ,
+    rgba(126,213,111,1),
+    rgba(40,180,131,1)
+  );
+}
+.dropdown:hover .dropdown-content {
+  display: grid;
+}

@@ -1,0 +1,71 @@
+<div class="contain">
+  <div class="profile_left" id="style-default">
+    <div class="row force-overflow">
+      <div class="box border-bottom-profile">
+        <img src="../../../../assets/avatar.jpg" alt="" class="box-img">
+        <h5>LocL</h5>
+        <p>Admin</p>
+        <ul>
+          <li>
+            <a>
+              <i class="fa fa-home"></i>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['nganh']">
+              <i class="fa fa-industry"></i>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['nhanvien']">
+              <i class="fa fa-users"> </i>
+            </a>
+          </li>
+        </ul>
+        <ul class="inf">
+          <li>ND(30)</li>
+          <li>DT(2/10)</li>
+          <li>NV(3)</li>
+        </ul>
+
+      </div>
+
+      <div class="box-1" style="width: 100%">
+        <div class="sidenav" style="width: 100%;">
+          <ul class="side">
+            <li routerLinkActive="active">
+              <a href="#" routerLinkActive="active" [routerLink]="['adminuser']">
+                <i class="fa fa-users" aria-hidden="true"></i>Người thuê</a>
+            </li>
+            <li routerLinkActive="active">
+              <a href="#" routerLinkActive="active" [routerLink]="['adminmembership']">
+                <i class="fa fa-users" aria-hidden="true"></i>Nhân viên</a>
+            </li>
+
+            <li routerLinkActive="active">
+              <a href="#" routerLinkActive="active" [routerLink]="['#']">
+                <i class="fa fa-home" aria-hidden="true"></i>Dịch vụ</a>
+            </li>
+
+            <li routerLinkActive="active">
+              <a href="#"*ngIf="role ==admin" routerLinkActive="active" [routerLink]="['detailuser']">
+                <i class="fa fa-user" aria-hidden="true"></i>Thông tin</a>
+                <a href="#"*ngIf="role ==admin" routerLinkActive="active" [routerLink]="['detailmembership']">
+                    <i class="fa fa-user" aria-hidden="true"></i>Thông tin</a>
+            </li>
+            <li routerLinkActive="active">
+              <a href="#" routerLinkActive="active" [routerLink]="['#']">
+                <i class="fa fa-home" aria-hidden="true"></i>Kho</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="profile_right">
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

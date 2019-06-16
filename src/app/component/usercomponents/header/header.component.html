@@ -1,0 +1,26 @@
+<!-- Site header -->
+<header>
+  <div class="container">
+    <nav>
+      <h1 class="brand"><a routerLink="/home"><span>warehouse</span></a></h1>
+      <ul>
+        <li><a (click)="signinclick = false" routerLink="/home">trang chủ</a></li>
+        <li>
+            <div class="dropdown">
+                <a routerLink="#">dịch vụ<i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                <a routerLink="#">cho thuê diện tích kho</a>
+                <a routerLink="#">cho thuê xe chở hàng</a>
+                <a routerLink="#">tuyển nhân viên kho</a>
+                <a routerLink="#">liên hệ</a>
+                <a routerLink="#">hỗ trợ</a>
+                </div>
+              </div>
+        </li>
+        <li><a *ngIf="!signinclick" (click)="signinclick = !signinclick" routerLink="/signin">đăng nhập</a></li>
+        <li><a *ngIf="signinclick" (click)="signinclick = !signinclick" routerLink="/signup">đăng ký</a></li>
+        <li><a routerLink="/admin">User</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,73 @@
+<div class="home">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col=12 mt-3">
+          <div class="row jumbotron diagram ">
+            <div *ngIf="signinclick" class="col-3  info ">
+              <h5 class="ptitle"> Thông tin khu vực </h5>
+              <hr>
+              <p>Tên khu vực: </p>
+              <p>Diện tích: </p>
+              <p>Vị trí: </p>
+            </div>
+            <div class="col-6 imgbox">
+              <img (click)="myClickFunction($event)" (click)="signinclick = true" class="imgdg"
+                src="../../../../assets/diagram.jpg" alt="sơ đồ">
+            </div>
+            <div *ngIf="signinclick" class="col-3 info ">
+              <h5 class="ptitle"> Chi tiết khu vực </h5>
+              <hr>
+              <p>% diện tích còn lại: </p>
+              <p>Thời hạn sử dụng: </p>
+              <p>Lần nhập hàng gần nhất: </p>
+              <p>Lần xuất hàng gần nhất:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container las">
+      <div class="card">
+        <div class="row ">
+          <div class="col-sm-6">
+            <div class="card-body">
+              <h4 class="card-title"><u>Khu vực bên trong nhà kho.</u></h4>
+              <p class="card-text">Khu vực bên trong nhà kho rộng rãi, sạch sẽ,
+                 cùng với hệ thống an ninh nghiêm ngặt sẽ là một sự lựa chọn hoàn hảo để chứa các sản phẩm của bạn
+                 Khu vực bên trong nhà kho rộng rãi, sạch sẽ,
+                 cùng với hệ thống an ninh nghiêm ngặt sẽ là một sự lựa chọn hoàn hảo để chứa các sản phẩm của bạn
+                 Khu vực bên trong nhà kho rộng rãi, sạch sẽ,
+                 cùng với hệ thống an ninh nghiêm ngặt sẽ là một sự lựa chọn hoàn hảo để chứa các sản phẩm của bạn
+                 Khu vực bên trong nhà kho rộng rãi, sạch sẽ,
+                 cùng với hệ thống an ninh nghiêm ngặt sẽ là một sự lựa chọn hoàn hảo để chứa các sản phẩm của bạn </p>
+            </div>
+          </div>
+          <div class="col-sm-6 imgif">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container las">
+      <div class="card">
+        <div class="row ">
+          <div class="col-sm-6">
+            <div class="card-body">
+                <h4 class="card-title"><u>Khu vực bên ngoài nhà kho.</u></h4>
+                <p class="card-text">Khu vực bên trong nhà kho rộng rãi, sạch sẽ,
+                   cùng với hệ thống an ninh nghiêm ngặt sẽ là một sự lựa chọn hoàn hảo để chứa các sản phẩm của bạn
+                   Khu vực bên trong nhà kho rộng rãi, sạch sẽ,
+                   cùng với hệ thống an ninh nghiêm ngặt sẽ là một sự lựa chọn hoàn hảo để chứa các sản phẩm của bạn
+                   Khu vực bên trong nhà kho rộng rãi, sạch sẽ,
+                   cùng với hệ thống an ninh nghiêm ngặt sẽ là một sự lựa chọn hoàn hảo để chứa các sản phẩm của bạn
+                   Khu vực bên trong nhà kho rộng rãi, sạch sẽ,
+                   cùng với hệ thống an ninh nghiêm ngặt sẽ là một sự lựa chọn hoàn hảo để chứa các sản phẩm của bạn
+                   </p>
+            </div>
+          </div>
+          <div class="col-sm-6 imgif">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

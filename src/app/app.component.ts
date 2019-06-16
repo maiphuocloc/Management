@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'manegement';
   signinclick:boolean = false;
+  admintemplate = true;
+
   
 }

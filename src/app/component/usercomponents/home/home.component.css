@@ -1,10 +1,9 @@
-body {
- background-color: aliceblue;
-}
 .las{
     margin-bottom: 30px;
 }
-
+.diagram {
+    margin-top: 115px;
+}
 .ptitle{
     text-align: center;
     padding-top: 20px;
@@ -21,14 +20,25 @@ body {
 .imgdg{
     display: block;
     height: auto;
-    max-width: 100%;
+    max-width: 95%;
     
 }
 .imgif{
-    padding-top: 15px;
-    background-image: url(../../../assets/info.jpg);
+    padding: 0px;
+    background-image: url(../../../../assets/info.jpg);
     background-position: center;
-    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);}
+    clip-path: polygon(0% 0%, 98% 0%, 97.5% 100%, 0% 100%, 0% 50%);
+}
+.imgbox{
+    height:440px;
+    margin:0 auto;
+    position:relative;
+}
+.imgbox img{
+    margin:auto;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+}
 
 .infomation img {
 float: right;

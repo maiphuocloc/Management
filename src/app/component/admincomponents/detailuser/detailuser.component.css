@@ -1,0 +1,20 @@
+.detail_user{
+  margin-top: 115px;
+}
+.ullist{
+    padding-left: 0px;
+    list-style: none;
+}
+.ptitle{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.avatar{
+    border: 2px solid black;
+    box-shadow: 5px 5px 15px;
+    margin: 10px;
+}
+.info1{
+padding: 20px 130px;
+}
