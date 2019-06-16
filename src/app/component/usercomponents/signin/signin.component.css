@@ -1,3 +1,6 @@
+.singin{
+  margin-top: 115px;
+}
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: .75rem;
@@ -160,10 +163,6 @@ h1, input {
 .input:invalid {
   box-shadow: none;
 }
-
-/* .pass:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px white inset;
-} */
 
 .inputButton {
   position: relative;
