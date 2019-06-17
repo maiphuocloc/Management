@@ -19,6 +19,11 @@ import { DetailmembershipComponent } from './component/admincomponents/detailmem
 import { ProfileuserComponent } from './component/admincomponents/profileuser/profileuser.component';
 import { ProfilemembershipComponent } from './component/admincomponents/profilemembership/profilemembership.component';
 
+import { AdminService } from './service/admin.service';
+import { UserService } from './service/user.service';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +49,10 @@ import { ProfilemembershipComponent } from './component/admincomponents/profilem
     MatButtonModule,
     MatCheckboxModule,
   ],
-  providers: [],
+  providers: [
+    AdminService,
+    UserService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
