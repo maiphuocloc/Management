@@ -2,21 +2,16 @@
   <div class="container">
     <div class="col singin">
       <div id="logbox">
-        <form id="signup" method="post" action="/signup">
-          <h1>Đăng nhập</h1>
-          <input name="user[name]" type="text" placeholder="Tên đăng nhập" pattern="^[\w]{3,16}$" autofocus="autofocus"
+        <form [formGroup]="loginForm" (ngSubmit)="Login()">
+          <h1>Sign In</h1>
+          <input formControlName="username"  type="text" placeholder="UserName" autofocus="autofocus"
             required="required" class="input pass" />
-          <input name="user[password]" type="password" placeholder="Mật khẩu" required="required" class="input pass" />
-          <div class="custom-control custom-checkbox mb-3">
+          <input formControlName="password" type="password" placeholder="Password" required="required" class="input pass" />
+          <!-- <div class="custom-control custom-checkbox mb-3">
             <input type="checkbox" class="custom-control-input" id="customCheck1">
             <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
-          </div>
+          </div> -->
           <input type="submit" value="Đăng Nhập" class="inputButton" />
-          <hr>
-          <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
-              class="fa fa-google mr-2"></i> Đăng nhập bằng Google</button>
-          <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
-              class="fa fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
         </form>
       </div>
     </div>

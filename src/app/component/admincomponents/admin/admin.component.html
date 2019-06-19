@@ -3,8 +3,8 @@
     <div class="row force-overflow">
       <div class="box border-bottom-profile">
         <img src="../../../../assets/avatar.jpg" alt="" class="box-img">
-        <h5>LocL</h5>
-        <p>Admin</p>
+        <h5>{{AuthService.currentUser.username}}</h5>
+        <p>{{AuthService.currentUser.role}}</p>
         <ul>
           <li>
             <a>
@@ -33,12 +33,12 @@
       <div class="box-1" style="width: 100%">
         <div class="sidenav" style="width: 100%;">
           <ul class="side">
-            <li routerLinkActive="active">
+            <li *ngIf="AuthService.currentUser.role=='employee'" routerLinkActive="active">
               <a href="#" routerLinkActive="active" [routerLink]="['adminuser']">
                 <i class="fa fa-users" aria-hidden="true"></i>Người thuê</a>
             </li>
-            <li routerLinkActive="active">
-              <a href="#" routerLinkActive="active" [routerLink]="['adminmembership']">
+            <li *ngIf="AuthService.currentUser.role=='employee'" routerLinkActive="active">
+              <a  routerLinkActive="active" [routerLink]="['adminmembership']">
                 <i class="fa fa-users" aria-hidden="true"></i>Nhân viên</a>
             </li>
 
@@ -48,10 +48,11 @@
             </li>
 
             <li routerLinkActive="active">
-              <a href="#"*ngIf="role ==admin" routerLinkActive="active" [routerLink]="['detailuser']">
+              <a routerLinkActive="active" *ngIf="AuthService.currentUser.role == 'employee'" [routerLink]="['detailmembership', AuthService.currentUser.username]">
                 <i class="fa fa-user" aria-hidden="true"></i>Thông tin</a>
-                <a href="#"*ngIf="role ==admin" routerLinkActive="active" [routerLink]="['detailmembership']">
-                    <i class="fa fa-user" aria-hidden="true"></i>Thông tin</a>
+              <a *ngIf="AuthService.currentUser.role == 'lender'"
+                routerLinkActive="active" [routerLink]="['detailuser', AuthService.currentUser.username]">
+                <i class="fa fa-user" aria-hidden="true"></i>Thông tin</a>
             </li>
             <li routerLinkActive="active">
               <a href="#" routerLinkActive="active" [routerLink]="['#']">

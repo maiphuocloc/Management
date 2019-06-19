@@ -1,11 +1,16 @@
 export class User {
   id?: string;
   name?: string;
+  username?: string;
+  password?: string;
   email?: string;
-  activated?: string;
-  role?: string;
-  auth_key?: string;
-  participantId?: string;
-  participantName?: string;
+  role?: string
+  phone?: string;
+  address?: string;
+  constructor() { }
+}
+
+export class Verify {
+  key?: string;
   constructor() { }
 }

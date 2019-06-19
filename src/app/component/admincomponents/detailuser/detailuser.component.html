@@ -11,24 +11,24 @@
           <div class="col-sm-6 info2 ">
             <h5 class="ptitle"> Thông tin cá nhân </h5>
             <hr>
-            <ul class="ullist">
-              <li>Họ tên:</li>
-              <li>Giới tính:</li>
-              <li>Ngày sinh:</li>
-              <li>Chức vụ:</li>
-              <li>Email:</li>
-              <li>Số điện thoại:</li>
-              <li>Địa chỉ:</li>
+            <ul *ngIf="lender" class="ullist">
+              <li>FullName: {{lender.name}}</li>
+              <li>UserName: {{lender.username}}</li>
+              <li>Sex:</li>
+              <li>Date:</li>
+              <li>Email: {{lender.email}}</li>
+              <li>Phone: {{lender.phone}}</li>
+              <li>Address: {{lender.address}}</li>
             </ul>
-            <button> Sửa </button>
-            <button> Xóa</button>
+            <button> Edit </button>
+            <button> Delete</button>
           </div>
         </div>         
     <h5 class="ptitle">Thông tin chi tiết kho hàng</h5>
     <hr>
     <ul class="ullist">
-      <li>Số vị trí đã thuê:</li>
-      <li>Tổng diện tích còn lại: (số %)</li>
+      <li>Số vị trí đã thuê:<b> Block 1</b></li>
+      <li>Tổng diện tích còn lại: 200m2 (20 %)</li>
       <li>Tần suất nhập hàng:</li>
       <li>Tần suất xuất hàng:</li>
     </ul>

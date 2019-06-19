@@ -11,17 +11,16 @@
             <div class="col-sm-6 info2 ">
               <h5 class="ptitle"> Thông tin cá nhân </h5>
               <hr>
-              <ul class="ullist">
-                <li>Họ tên:</li>
-                <li>Giới tính:</li>
-                <li>Ngày sinh:</li>
-                <li>Chức vụ:</li>
-                <li>Email:</li>
-                <li>Số điện thoại:</li>
-                <li>Địa chỉ:</li>
+              <ul *ngIf="lender" class="ullist">
+                <li>Full Name: {{lender.username}}</li>
+                <li>Sex:</li>
+                <li>Date:</li>
+                <li>Email: {{lender.email}}</li>
+                <li>Phone: {{lender.phone}}</li>
+                <li>Địa chỉ: {{lender.address}}</li>
               </ul>
-              <button> Sửa </button>
-              <button> Xóa</button>
+              <button> Edit </button>
+              <button> Delete</button>
             </div>
           </div>         
       <h5 class="ptitle">Thông tin chi tiết kho hàng</h5>

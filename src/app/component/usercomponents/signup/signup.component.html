@@ -2,19 +2,16 @@
   <div class="container">
     <div class="col singout">
       <div id="logbox">
-        <form id="signup" method="post" action="/signup">
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
           <h1>Tạo tài khoản</h1>
-          <input name="user[fullname]" type="text" placeholder="Tên đầy đủ" pattern="^[\w]{3,16}$"
-            autofocus="autofocus" required="required" class="input pass" />
-          <input name="user[name]" type="text" placeholder="Tên đăng nhập" pattern="^[\w]{3,16}$"
-            autofocus="autofocus" required="required" class="input pass" />
-          <input name="user[password]" type="password" placeholder="Mật khẩu" required="required"
+          <input formControlName="name" type="text" placeholder="Full Name" autofocus="autofocus" required="required"
             class="input pass" />
-          <input name="user[password2]" type="password" placeholder="Xác nhận mật khẩu" required="required"
+          <input formControlName="username" type="text" placeholder="User Name" autofocus="autofocus" required="required"
             class="input pass" />
-          <input name="user[email]" type="email" placeholder="Địa chỉ email" class="input pass" />
-          <input name="user[phone]" type="text" placeholder="Số điện thoại" class="input pass" />
-          <input name="user[address]" type="text" placeholder="Địa chỉ" class="input pass" />
+          <input formControlName="password" type="password" placeholder="Password" class="input pass" />
+          <input formControlName="email" type="text" placeholder="Email" required="required" class="input pass" />
+          <input formControlName="phone" type="text" placeholder="Phone Number" class="input pass" />
+          <input formControlName="address" type="text" placeholder="Address" class="input pass" />
           <input type="submit" value="Đăng ký" class="inputButton" />
         </form>
       </div>

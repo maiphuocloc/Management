@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
 import { AppRoutingModule } from './app-routing.module';
 import  {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import { NoopAnimationsModule} from '@angular/platform-browser/animations';
@@ -18,11 +19,19 @@ import { AdminmembershipComponent } from './component/admincomponents/adminmembe
 import { DetailmembershipComponent } from './component/admincomponents/detailmembership/detailmembership.component';
 import { ProfileuserComponent } from './component/admincomponents/profileuser/profileuser.component';
 import { ProfilemembershipComponent } from './component/admincomponents/profilemembership/profilemembership.component';
-
+import { AuthGuardLogin } from './service/auth-guard-login';
 import { AdminService } from './service/admin.service';
 import { UserService } from './service/user.service';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { AppHttpClient } from './service/app-http.service';
+import { VerifyComponent } from './component/usercomponents/verify/verify.component';
+import { AuthService } from './service/auth.service';
+
+export function tokenGetter() {
+  return localStorage.getItem('token');
+}
 
 @NgModule({
   declarations: [
@@ -39,6 +48,7 @@ import { UserService } from './service/user.service';
     DetailmembershipComponent,
     ProfileuserComponent,
     ProfilemembershipComponent,
+    VerifyComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,10 +58,22 @@ import { UserService } from './service/user.service';
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        // whitelistedDomains: ['localhost:3000', 'localhost:4200']
+      }
+    }),
   ],
   providers: [
     AdminService,
     UserService,
+    AppHttpClient,
+    AuthService,
+    AuthGuardLogin,
   ],
   bootstrap: [AppComponent]
 })

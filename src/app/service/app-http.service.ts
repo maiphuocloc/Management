@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'; 
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class AppHttpClient {
 
-  apiUrl: "localhost:3000/api/v1/";
-
+  apiUrl: String =  environment.base_api_url
+ 
   constructor(
     private http: HttpClient,
   ) { }
 
   createHeader() {
-    let token = localStorage.getItem('token');
+    let token = localStorage.getItem('accessToken');
     const headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': '' + token + '' });
     return headers
   }

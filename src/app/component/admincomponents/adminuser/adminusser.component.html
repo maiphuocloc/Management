@@ -7,32 +7,20 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>Họ tên</th>
-          <th>Số Điện thoại</th>
+          <th>Full Name</th>
           <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
           <th></th>
           <th></th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-            <td> <a class="link" [routerLink]="['profileuser']"> Mai Phước Lộc</a></td>
-          <td>01207262959</td>
-          <td>phuocloc_m@yahoo.com</td>
-          <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-          <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-        </tr>
-        <tr>
-          <td>Mary</td>
-          <td>Moe</td>
-          <td>mary@example.com</td>
-          <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-          <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
+      <tbody *ngFor="let lender of lenders">
+        <tr *ngIf="lender.role == 'lender'">
+            <td> <a class="link" [routerLink]="['profileuser', lender.username ]">{{lender.username}}</a></td>
+          <td>{{lender.email}}</td>
+          <td>{{lender.phone}}</td>
+          <td>{{lender.address}}</td>
           <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
           <td><i class="fa fa-trash" aria-hidden="true"></i></td>
         </tr>

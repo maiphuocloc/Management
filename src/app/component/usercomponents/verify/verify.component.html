@@ -1,0 +1,14 @@
+<div>
+    <div class="container">
+      <div class="col singout">
+        <div id="logbox">
+          <form [formGroup]="verifyForm" (ngSubmit)="Verify()">
+            <h1>Verify Account</h1>
+            <input formControlName="verify" [(ngModel)]="key" type="text" placeholder="Input code from your mail" autofocus="autofocus" required="required"
+              class="input pass" />
+            <input type="submit" value="Verify" class="inputButton" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

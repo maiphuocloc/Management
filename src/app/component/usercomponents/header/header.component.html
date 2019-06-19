@@ -4,10 +4,10 @@
     <nav>
       <h1 class="brand"><a routerLink="/home"><span>warehouse</span></a></h1>
       <ul>
-        <li><a (click)="signinclick = false" routerLink="/home">trang chủ</a></li>
+        <li><a routerLink="/home">Home</a></li>
         <li>
             <div class="dropdown">
-                <a routerLink="#">dịch vụ<i class="fa fa-caret-down"></i></a>
+                <a routerLink="#">Service<i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content">
                 <a routerLink="#">cho thuê diện tích kho</a>
                 <a routerLink="#">cho thuê xe chở hàng</a>
@@ -17,9 +17,10 @@
                 </div>
               </div>
         </li>
-        <li><a *ngIf="!signinclick" (click)="signinclick = !signinclick" routerLink="/signin">đăng nhập</a></li>
-        <li><a *ngIf="signinclick" (click)="signinclick = !signinclick" routerLink="/signup">đăng ký</a></li>
-        <li><a routerLink="/admin">User</a></li>
+        <li><a  *ngIf="!AuthService.loggedIN()" routerLink="/signin">Login</a></li>
+        <li><a  *ngIf="!AuthService.loggedIN()" routerLink="/signup">Register</a></li>
+        <li><a  *ngIf="AuthService.loggedIN()" routerLink="/admin">Management</a></li>
+        <li><a  *ngIf="AuthService.loggedIN()"(click)="logout()" >Logout</a></li>
       </ul>
     </nav>
   </div>

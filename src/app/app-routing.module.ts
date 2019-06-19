@@ -10,6 +10,9 @@ import { DetailuserComponent } from './component/admincomponents/detailuser/deta
 import { DetailmembershipComponent } from './component/admincomponents/detailmembership/detailmembership.component';
 import { ProfileuserComponent } from './component/admincomponents/profileuser/profileuser.component';
 import { ProfilemembershipComponent } from './component/admincomponents/profilemembership/profilemembership.component';
+import { VerifyComponent } from './component/usercomponents/verify/verify.component';
+
+import { AuthGuardLogin } from './service/auth-guard-login';
 
 
 const routes: Routes = [
@@ -17,21 +20,23 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'verify', component: VerifyComponent },
+
   {
-    path: 'admin', component: AdminComponent, children: [
+    path: 'admin', component: AdminComponent , children: [
       {
         path: 'adminuser', component: AdminusserComponent, children: [
-          { path: 'profileuser', component: ProfileuserComponent },
+          { path: 'profileuser/:username', component: ProfileuserComponent },
         ]
       },
       {
         path: 'adminmembership', component: AdminmembershipComponent, children: [
-          { path: 'profilemembership', component: ProfilemembershipComponent },
+          { path: 'profilemembership/:username', component: ProfilemembershipComponent },
         ]
       },
-      { path: 'detailuser', component: DetailuserComponent },
-      { path: 'detailmembership', component: DetailmembershipComponent },
-    ]
+      { path: 'detailuser/:username', component: DetailuserComponent },
+      { path: 'detailmembership/:username', component: DetailmembershipComponent },
+    ], canActivate: [AuthGuardLogin],
   },
   { path: '**', redirectTo: '/notfound' },
 ];

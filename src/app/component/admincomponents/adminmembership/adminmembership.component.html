@@ -17,30 +17,14 @@
               <th></th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td> <a class="link" [routerLink]="['profilemembership']"> Mai Phước Lộc</a></td>
-              <td>01207262959</td>
-              <td>phuocloc_m@yahoo.com</td>
+          <tbody *ngFor="let emp of employees">
+            <tr *ngIf="emp.role == 'employee'">
+              <td> <a class="link" [routerLink]="['profilemembership', emp.username]"> {{emp.name}}</a></td>
+              <td>{{emp.phone}}</td>
+              <td>{{emp.email}}</td>
               <td>Admin</td>
               <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
               <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-              <td>Mary</td>
-              <td>0123456789</td>
-              <td>mary@example.com</td>
-              <td>Nhân viên hỗ trợ</td>
-              <td>Edit</td>
-              <td>Delete</td>
-            </tr>
-            <tr>
-              <td>July</td>
-              <td>0123456789</td>
-              <td>july@example.com</td>
-              <td>Nhân viên hỗ trợ</td>
-              <td>Edit</td>
-              <td>Delete</td>
             </tr>
           </tbody>
         </table>
