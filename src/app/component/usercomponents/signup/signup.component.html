@@ -3,16 +3,16 @@
     <div class="col singout">
       <div id="logbox">
         <form [formGroup]="registerForm" (ngSubmit)="register()">
-          <h1>Tạo tài khoản</h1>
-          <input formControlName="name" type="text" placeholder="Full Name" autofocus="autofocus" required="required"
+          <h1>Đăng Ký</h1>
+          <input formControlName="name" type="text" placeholder="Họ Tên" autofocus="autofocus" required="required"
             class="input pass" />
-          <input formControlName="username" type="text" placeholder="User Name" autofocus="autofocus" required="required"
+          <input formControlName="username" type="text" placeholder="Tên đăng nhập" autofocus="autofocus" required="required"
             class="input pass" />
-          <input formControlName="password" type="password" placeholder="Password" class="input pass" />
+          <input formControlName="password" type="password" placeholder="mật khẩu" class="input pass" />
           <input formControlName="email" type="text" placeholder="Email" required="required" class="input pass" />
-          <input formControlName="phone" type="text" placeholder="Phone Number" class="input pass" />
-          <input formControlName="address" type="text" placeholder="Address" class="input pass" />
-          <input type="submit" value="Đăng ký" class="inputButton" />
+          <input formControlName="phone" type="text" placeholder="Số điện thoại" class="input pass" />
+          <input formControlName="address" type="text" placeholder="Địa chỉ" class="input pass" />
+          <input type="submit" value="Đăng Ký" class="inputButton" />
         </form>
       </div>
     </div>

@@ -56,13 +56,9 @@ export class AuthService {
 
   setCurrentUser(decodedUser) {
     this.loggedIn = true;
-    // this.currentUser.id = decodedUser.id;
     this.currentUser.username = decodedUser.username;
     this.currentUser.email = decodedUser.email;
     this.currentUser.role = decodedUser.role;
-    // decodedUser.role === 'admin' ? this.isAdmin = true : this.isAdmin = false;
-    // delete decodedUser.role;
-    // console.log(decodedUser)
   }
 
 }

@@ -6,9 +6,10 @@
             <div *ngIf="signinclick" class="col-3  info ">
               <h5 class="ptitle"> Thông tin khu vực </h5>
               <hr>
-              <p>Tên khu vực: </p>
-              <p>Diện tích: </p>
-              <p>Vị trí: </p>
+              <p>Tên khu vực: 1 </p>
+              <p>Diện tích: 200m2 </p>
+              <p>Vị trí: 1 </p>
+              <p>Trạng Thái: Đã được thuê </p>
             </div>
             <div class="col-6 imgbox">
               <img (click)="myClickFunction($event)" (click)="signinclick = true" class="imgdg"
@@ -17,10 +18,8 @@
             <div *ngIf="signinclick" class="col-3 info ">
               <h5 class="ptitle"> Chi tiết khu vực </h5>
               <hr>
-              <p>% diện tích còn lại: </p>
-              <p>Thời hạn sử dụng: </p>
-              <p>Lần nhập hàng gần nhất: </p>
-              <p>Lần xuất hàng gần nhất:</p>
+              <p>thời gian thuê: 12 tháng </p>
+              <p>Giá: 60 triệu </p>
             </div>
           </div>
         </div>

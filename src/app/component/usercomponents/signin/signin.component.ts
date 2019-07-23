@@ -30,14 +30,12 @@ export class SigninComponent implements OnInit {
   Login() {
     this.authService.login(this.loginForm.value).subscribe(
       res => {
-        // this.toast.setMessage('You successfully registered!', 'success');
         this.router.navigate(['/admin']);
       },
       errors => {
         console.log("error", errors)
         this.loginForm.reset();
       }
-      // error => this.toast.setMessage('email already exists', 'danger')
     );
   }
 

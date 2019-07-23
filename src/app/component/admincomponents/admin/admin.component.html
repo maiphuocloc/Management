@@ -12,7 +12,7 @@
             </a>
           </li>
           <li>
-            <a [routerLink]="['nganh']">
+            <a [routerLink]="['#']">
               <i class="fa fa-industry"></i>
             </a>
           </li>
@@ -29,14 +29,17 @@
         </ul>
 
       </div>
-
       <div class="box-1" style="width: 100%">
         <div class="sidenav" style="width: 100%;">
           <ul class="side">
             <li *ngIf="AuthService.currentUser.role=='employee'" routerLinkActive="active">
+                  <a href="#" routerLinkActive="active" [routerLink]="['dashboard']">
+                    <i class="fa fa-users" aria-hidden="true"></i>Thống Kê</a>
+            </li> 
+            <li *ngIf="AuthService.currentUser.role=='employee'" routerLinkActive="active">
               <a href="#" routerLinkActive="active" [routerLink]="['adminuser']">
                 <i class="fa fa-users" aria-hidden="true"></i>Người thuê</a>
-            </li>
+            </li> 
             <li *ngIf="AuthService.currentUser.role=='employee'" routerLinkActive="active">
               <a  routerLinkActive="active" [routerLink]="['adminmembership']">
                 <i class="fa fa-users" aria-hidden="true"></i>Nhân viên</a>
@@ -65,7 +68,7 @@
     </div>
   </div>
   <div class="profile_right">
-
+    
     <router-outlet></router-outlet>
 
   </div>

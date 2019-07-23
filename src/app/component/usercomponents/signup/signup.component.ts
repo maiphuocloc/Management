@@ -40,10 +40,8 @@ export class SignupComponent implements OnInit {
     console.log(this.registerForm.value);
     this.userService.register(this.registerForm.value).subscribe(
       res => {
-        // this.toast.setMessage('You successfully registered!', 'success');
         this.router.navigate(['/verify']);
-      },
-      // error => this.toast.setMessage('email already exists', 'danger')
+      }
     );
   }
 

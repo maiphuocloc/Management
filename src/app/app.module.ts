@@ -28,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppHttpClient } from './service/app-http.service';
 import { VerifyComponent } from './component/usercomponents/verify/verify.component';
 import { AuthService } from './service/auth.service';
+import { DashboardComponent } from './component/admincomponents/dashboard/dashboard.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -49,6 +50,7 @@ export function tokenGetter() {
     ProfileuserComponent,
     ProfilemembershipComponent,
     VerifyComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

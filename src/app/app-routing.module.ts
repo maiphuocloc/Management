@@ -11,7 +11,7 @@ import { DetailmembershipComponent } from './component/admincomponents/detailmem
 import { ProfileuserComponent } from './component/admincomponents/profileuser/profileuser.component';
 import { ProfilemembershipComponent } from './component/admincomponents/profilemembership/profilemembership.component';
 import { VerifyComponent } from './component/usercomponents/verify/verify.component';
-
+import { DashboardComponent } from './component/admincomponents/dashboard/dashboard.component';
 import { AuthGuardLogin } from './service/auth-guard-login';
 
 
@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'verify', component: VerifyComponent },
-
+  { path: 'dashboard', component: DashboardComponent },
   {
     path: 'admin', component: AdminComponent , children: [
       {
@@ -36,6 +36,7 @@ const routes: Routes = [
       },
       { path: 'detailuser/:username', component: DetailuserComponent },
       { path: 'detailmembership/:username', component: DetailmembershipComponent },
+      { path: 'dashboard', component: DashboardComponent },
     ], canActivate: [AuthGuardLogin],
   },
   { path: '**', redirectTo: '/notfound' },

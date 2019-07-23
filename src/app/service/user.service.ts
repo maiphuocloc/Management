@@ -30,9 +30,6 @@ export class UserService {
     return this.httpClient.post(this.apiUrl + 'login', credentials);
   }
 
-  // logout(): Observable<any> {
-  //   return this.httpClient.post(this.apiUrl + 'login', credentials);
-  // }
 
   getUsers(): Observable<any> {
     return this.http.get('user');

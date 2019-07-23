@@ -26,10 +26,8 @@ export class VerifyComponent implements OnInit {
   Verify() {
     this.userService.verify(this.key).subscribe(
       res => {
-        // this.toast.setMessage('You successfully registered!', 'success');
         this.router.navigate(['/signin']);
       },
-      // error => this.toast.setMessage('email already exists', 'danger')
     );
   }
 
